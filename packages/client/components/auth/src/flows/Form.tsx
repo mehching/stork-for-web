@@ -87,6 +87,7 @@ export function Fields(props: FieldProps) {
     <For each={props.fields}>
       {(field) => {
         let fieldName: Field;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let value: any;
         let disabled: boolean | undefined;
         if (typeof field === "string") {
