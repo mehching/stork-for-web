@@ -86,33 +86,25 @@ export function Fields(props: FieldProps) {
   return (
     <For each={props.fields}>
       {(field) => {
-        let fieldName: Field;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        let value: any;
-        let disabled: boolean | undefined;
+        // If field is just a Field value, convert it to a FieldPreset
         if (typeof field === "string") {
-          fieldName = field;
-          disabled = false;
-        } else {
-          fieldName = field.field;
-          value = field.value;
-          disabled = field.disabled;
+          field = { field: field };
         }
         return (
           <label>
-            {fieldName === "log-out" ? (
-              <Checkbox2 name={fieldName}>
-                {fieldConfiguration[fieldName].name()}
+            {field.field === "log-out" ? (
+              <Checkbox2 name={field.field}>
+                {fieldConfiguration[field.field].name()}
               </Checkbox2>
             ) : (
               <TextField
                 required
-                {...fieldConfiguration[fieldName]}
-                name={fieldName}
-                label={fieldConfiguration[fieldName].name()}
-                placeholder={fieldConfiguration[fieldName].placeholder()}
-                disabled={disabled}
-                value={value}
+                {...fieldConfiguration[field.field]}
+                name={field.field}
+                label={fieldConfiguration[field.field].name()}
+                placeholder={fieldConfiguration[field.field].placeholder()}
+                disabled={field.disabled}
+                value={field.value}
               />
             )}
           </label>
