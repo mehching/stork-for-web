@@ -141,7 +141,7 @@ const Layout = styled("div", {
  */
 const Content = styled("div", {
   base: {
-    background: "var(--md-sys-color-surface-container)",
+    background: "var(--md-sys-color-surface-container-low)",
 
     display: "flex",
     width: "100%",
