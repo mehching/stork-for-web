@@ -1,12 +1,11 @@
 import { Trans } from "@lingui-solid/solid/macro";
 
+import { useApi, useClient } from "@revolt/client";
 import { CONFIGURATION } from "@revolt/common";
 import { useNavigate, useParams } from "@revolt/routing";
 import { Button, Row, iconSize } from "@revolt/ui";
-import { useApi, useClient } from "@revolt/client";
 
 import MdArrowBack from "@material-design-icons/svg/filled/arrow_back.svg?component-solid";
-
 
 import { Show } from "solid-js";
 import { FlowTitle } from "./Flow";
@@ -20,7 +19,7 @@ export default function FlowCreate() {
   const api = useApi();
   const getClient = useClient();
   const navigate = useNavigate();
-  const { code } = useParams();;
+  const { code } = useParams();
 
   /**
    * Create an account
@@ -64,7 +63,11 @@ export default function FlowCreate() {
       <Form onSubmit={create} captcha={CONFIGURATION.HCAPTCHA_SITEKEY}>
         <Fields fields={["email", "password"]} />
         <Show when={isInviteOnly()}>
-          <Fields fields={[{field: "invite", value: code, disabled: code?.length > 0}]} />
+          <Fields
+            fields={[
+              { field: "invite", value: code, disabled: code?.length > 0 },
+            ]}
+          />
         </Show>
         <Row justify>
           <a href="..">

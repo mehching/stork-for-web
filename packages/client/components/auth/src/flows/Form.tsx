@@ -98,24 +98,25 @@ export function Fields(props: FieldProps) {
           disabled = field.disabled;
         }
         return (
-        <label>
-          {fieldName === "log-out" ? (
-            <Checkbox2 name={fieldName}>
-              {fieldConfiguration[fieldName].name()}
-            </Checkbox2>
-          ) : (
-            <TextField
-              required
-              {...fieldConfiguration[fieldName]}
-              name={fieldName}
-              label={fieldConfiguration[fieldName].name()}
-              placeholder={fieldConfiguration[fieldName].placeholder()}
-              disabled={disabled}
-              value={value}
-            />
-          )}
-        </label>
-      )}}
+          <label>
+            {fieldName === "log-out" ? (
+              <Checkbox2 name={fieldName}>
+                {fieldConfiguration[fieldName].name()}
+              </Checkbox2>
+            ) : (
+              <TextField
+                required
+                {...fieldConfiguration[fieldName]}
+                name={fieldName}
+                label={fieldConfiguration[fieldName].name()}
+                placeholder={fieldConfiguration[fieldName].placeholder()}
+                disabled={disabled}
+                value={value}
+              />
+            )}
+          </label>
+        );
+      }}
     </For>
   );
 }
