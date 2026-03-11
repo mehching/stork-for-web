@@ -23,6 +23,7 @@ import MdExplore from "@material-design-icons/svg/filled/explore.svg?component-s
 import MdGroups3 from "@material-design-icons/svg/filled/groups_3.svg?component-solid";
 import MdHome from "@material-design-icons/svg/filled/home.svg?component-solid";
 import MdPayments from "@material-design-icons/svg/filled/payments.svg?component-solid";
+import MdDownload from "@material-design-icons/svg/outlined/download.svg?component-solid";
 import MdRateReview from "@material-design-icons/svg/filled/rate_review.svg?component-solid";
 import MdSettings from "@material-design-icons/svg/filled/settings.svg?component-solid";
 
@@ -177,15 +178,15 @@ export function HomePage() {
               variant="tertiary"
               onClick={() =>
                 window.open(
-                  "https://wiki.revolt.chat/notes/project/financial-support/",
+                  "https://stoat.hagridhosting.com/downloads/stoat-desktop-setup.exe",
                 )
               }
               description={
-                <Trans>Support the project by donating - thank you!</Trans>
+                <Trans>Download the Stoat desktop app for Windows.</Trans>
               }
-              icon={<MdPayments />}
+              icon={<MdDownload />}
             >
-              <Trans>Donate to Stoat</Trans>
+              <Trans>Download for Windows</Trans>
             </CategoryButton>
           </SeparatedColumn>
           <SeparatedColumn>
