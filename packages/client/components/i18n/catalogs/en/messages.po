@@ -3189,3 +3189,11 @@ msgstr "Your role ranking is too low to take this action."
 #: components/i18n/errors.ts
 msgid "Your user has already been created? Try logging in again or refreshing the app."
 msgstr "Your user has already been created? Try logging in again or refreshing the app."
+
+#: src/interface/Home.tsx
+msgid "Download for Windows"
+msgstr "Download for Windows"
+
+#: src/interface/Home.tsx
+msgid "Download the Stoat desktop app for Windows."
+msgstr "Download the Stoat desktop app for Windows."
