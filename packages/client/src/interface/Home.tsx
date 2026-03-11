@@ -205,20 +205,16 @@ export function HomePage() {
             </Show>
             <CategoryButton
               onClick={() =>
-                openModal({
-                  type: "settings",
-                  config: "user",
-                  context: { page: "feedback" },
-                })
+                window.open("https://stoat.hagridhosting.com/invite/DcSQmj2z")
               }
               description={
                 <Trans>
-                  Let us know how we can improve our app by giving us feedback.
+                  Join the official Hagrid server on the Stoat platform, if you're cool enough.
                 </Trans>
               }
-              icon={<MdRateReview {...iconSize(22)} />}
+              icon={<MdGroups3 />}
             >
-              <Trans>Give feedback on Stoat</Trans>
+              <Trans>Join the Hagrid server</Trans>
             </CategoryButton>
             <CategoryButton
               onClick={() => openModal({ type: "settings", config: "user" })}

@@ -3197,3 +3197,11 @@ msgstr "Download for Windows"
 #: src/interface/Home.tsx
 msgid "Download the Stoat desktop app for Windows."
 msgstr "Download the Stoat desktop app for Windows."
+
+#: src/interface/Home.tsx
+msgid "Join the Hagrid server"
+msgstr "Join the Hagrid server"
+
+#: src/interface/Home.tsx
+msgid "Join the official Hagrid server on the Stoat platform, if you're cool enough."
+msgstr "Join the official Hagrid server on the Stoat platform, if you're cool enough."
